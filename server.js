@@ -4,7 +4,7 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 app.get('/multiply/:x/:y', (req, res) => {
-    res.send(req.params.x * req.params.y)
+    res.send(`${parseInt(req.params.x) * parseInt(req.params.y)}`)
 })
 app.get('/books', (req, res) => {
     const books = ['Congo', 'Atlas Shrugged', 'The Phoenix Project']
